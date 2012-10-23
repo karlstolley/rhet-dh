@@ -1,8 +1,4 @@
-MVC, Materiality, and the Magus: The Rhetoric of Source-Level Production
-
-[Submitted for inclusion in Part One: Defining Field Connections; however, if additional research
-and methodology chapters are needed (or even if this idea sounds more interesting), I am up to the
-challenge of reframing the chapter to articulate source-level production *as* as research method.]
+# MVC, Materiality, and the Magus: The Rhetoric of Source-Level Production
 
 In this proposed chapter, I will connect three concepts that I believe are central to understanding
 the intellectual work of source-level production (programming) as a rhetorical act that binds the
@@ -10,22 +6,22 @@ field of rhetoric with broader, production-oriented pursuits in digital humaniti
 
 The three concepts are:
 
-* Model-View-Controller (MVC) architecture: In many ways an opportunity to build on Hart-Davidson’s
-(2005) rhetoric of objects, relationships, and views, MVC as implemented through the web-based
-development framework Ruby on Rails provides a rigorous, rule-bound study of the key components of
-source-level production. By isolating data in the model, (HTTP) request-processing in the
-controller, and design and interactivity in the view, MVC stands as both an exemplar of the
+* **Model-View-Controller (MVC) architecture**: In many ways an opportunity to build on
+Hart-Davidson’s (2005) rhetoric of objects, relationships, and views, MVC as implemented through the
+web-based development framework Ruby on Rails provides a rigorous, rule-bound study of the key
+components of source-level production. By isolating data in the model, (HTTP) request-processing in
+the controller, and design and interactivity in the view, MVC stands as both an exemplar of the
 divisions of labor within digital production and, as I will argue in the chapter, just how shaky and
 unnecessary such divisions are.
 
-* Materiality: A core argument of my chapter will be that digital materiality must be foregrounded
-in discussions of production in rhetoric and DH. My articulation of materiality will take two forms:
-first, it will reassert the inherent symbolic and representational (versus computational) component
-of *digital*. Second, it will underscore open-source production technologies and artifacts as a
-class of digital materials uniquely suited to pursuing and demonstrating the intellectual work of
-source-level production, including for tenure and promotion.
+* **Materiality**: A core argument of my chapter will be that digital materiality must be
+foregrounded in discussions of production in rhetoric and DH. My articulation of materiality will
+take two forms: first, it will reassert the inherent symbolic and representational (versus
+computational) component of *digital*. Second, it will underscore open-source production
+technologies and artifacts as a class of digital materials uniquely suited to pursuing and
+demonstrating the intellectual work of source-level production, including for tenure and promotion.
 
-* The Magus: William Covino’s concept of the magus, as articulated in *Magic, Rhetoric, and
+* **The Magus**: William Covino’s concept of the magus, as articulated in *Magic, Rhetoric, and
 Literacy* (1994), brings together the other two concepts in the chapter into a coherent whole,
 emphasizing elements of Kenneth Burke’s symbolic action and dramatism in the
 material/representational realm of source-level production. Although digital matters remained
