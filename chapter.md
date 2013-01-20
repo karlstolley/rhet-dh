@@ -1,27 +1,48 @@
-<!--3000 words; CMS author-date-style citations; Due 1/18/2013-->
+“The greater the range and intenseness of the opportunities for the exercising of our symbolic prowess, the greater might be our delight in such modes of action.” Kenneth Burke, “Rhetoric and Poetics,” *Language as Symbolic Action*, p. 297
 
-# MVC, Materiality, and the Magus: The Rhetoric of Source-Level Production
-*Karl Stolley, Illinois Institute of Technology*
+Let me open with the major premise of my argument here: programming is writing. I mean that literally. Yes, “programming is writing” is not infrequently uttered in the metaphorical sense of “is,” and as a metaphor, I agree with programmer Steve McConnell who pegs writing as “the most primitive metaphor for software development.” Programming is writing fails metaphorically, because
+among programmers, it is based on a fundamentally undernaunced understanding of what writing is. McConnell observes
 
-**Abstract**
-3-5 sentences/120 words
+  * “[writing] doesn’t require any formal planning, and you figure out what you want to say as you go”
+  * “writing is usually a one-person activity”
+  * “in writing, a high premium is placed on originality. In software construction, [originality] is often less effective than focusing on the reuse of design ideas, code, and test cases from previous artifacts”
+  * “when you finish writing a letter, you stuff it into an envelope and mail it. You can’t change it anymore”
 
-**Keywords**
-About 5
+We know these things, perhaps saving the last one under certain circumstances, to be false. Writing may not require formal planning, but as the introductory-writing student quickly discovers, that’s an unstudied way to proceed. We know that writing is collaborative, on some level, always. And traditional writing approaches, from citation to genre, provide the foundation upon which “originality” is built.
 
-Making language has long been regarded as, in some sense, magical; as a *spell* (spelling, even in its ostensibly nonmagical sense, denotes the visible materialization of invisible thought...). --William Covino, 5
+Granted, in certain forms of writing on certain occasions, change becomes impossible, or at least very difficult. So it is with the mailed letter that McConnell points to. But even digitally, the situation is no better, especially with digital writing conducted through interfaces, particularly the WYSIWYG. As I have argued elsewhere, one-off digital invention--the first (and typically, only) stab at even a web page--will have to suffice in the digital rhetorical act. There is simply too much risk involved in revision. Correcting one problem, especially through a WYSIWYG interface that outputs code on behalf of the writer, spirals into a game of Whack-a-Mole, multiplying problems whose solutions introduce still other problems.
+
+But I am talking here about writing code right alongside or in service to natural languages. More than 30 years of visual interfaces standing between writers and language (computer and natural) have helped to diminish awareness of the critical symbolic activity happening just beneath even the touch-screen on an iPad. Jay David Bolter observed in 1991 what is so easy to forget today: “Even a graphics program does not draw: it writes.” Further, “All computing is reading and writing. The computer is therefore a technology for all writers--scientists and engineers as well as scholars, novelists, and poets” (10).
+
+In maintaining for at least the scope of this chapter a nonmetaphorical meaning in “programming is writing,” I am also beholden to a particular rhetoric of the Burkean flavor of symbolic action raised in the epigraph above. Wildly reducing the nuanced complexities of the Burkean system, I maintain that rhetoric is the artful manipulation of symbols “to form attitudes or to induce actions” by and among human agents.
+
+In fact, I don’t think any more nuanced rhetoric of programming is possible at the moment. What is so obviously lacking among people who cannot consider themselves programmers is a sense of the “artful manipulation of symbols” that constitutes writing code. What we have in the field of rhetoric, and in the digital humanities more broadly, is magic, not rhetoric, when it comes to the symbolic power of computer languages.
+
+“Even in our nonmagical world, magic remains a conceptual construct for appraising the powers of language,” writes William Covino in *Magic, Rhetoric, and Literacy*, “and while magic is understood by some as a liberatory alternative to established rationalism, the prospect of a magical epistemology is a fearful one even for those who endorse literacy as a disruptive force” (5).
+
+Whenever I write or speak about programming, whether at a conference or even to a classroom full of graduate students for whom programming a new enterprise, fear is the overwhelming emotional marker of my audience. In Covino’s terms, the prospect of programming presents itself as an arresting magic by a particular magus (the programmer) whose machinations (from word processors to smart phones) represent  “the imposition of the powerful few upon the unquestioning many” (8).
+
+But magic presents itself in another sense: “the practice of disrupting and critiquing articulate power: a (re)sorcery of spells for generating multiple perspectives.” Noting that “generative magic enters the world it questions,” however, Covino argues that “generative magic is at once private and public, occult and common, an esoteric critical discourse of ‘specialist’ communities that define themselves in opposition to the mainstream, and an amplification of the possibilities for action.”
+
+The problem is, widespread fear of programming among non-programmers is rampant; and with it, an overconfident sense of what does and does not constitute the scope and work of rhetoric.
+
+I’ll conclude this section with a quote from Giambattista Vico cited in Covino:
+
+    > [A]nyone who is confident of perceiving something in a clear and distinct idea of the mind
+    > is easily deceived, and he will often think he knows a thing distinctly when he still has
+    > only a confused consciousness of it...
+
+To use another quote, here is Clarke’s Third Law: “Any sufficiently advanced technology is indistinguishable from magic.” In contenting itself with an arresting magic/rhetoric of programming, the field of rhetoric and the broader humanities alike cuts itself off from the possibilities of a generative rhetoric
+
+
+----
+
+
+“Making language has long been regarded as, in some sense, magical,” writes William Covino in *Magic, Rhetoric, and Literacy*,  “as a *spell* (spelling, even in its ostensibly nonmagical sense, denotes the visible materialization of invisible thought...). --William Covino, 5
 
 For the magus, words transform reality, and facility with language makes multiple realities possible. (Covino 6)
 
 Any sufficiently advanced technology is indistinguishable from magic. --Arthur C. Clarke
 
-Bill Covino’s (1994) *Magic, Rhetoric, and Literacy* is a wide-ranging treatment of magic and rhetoric. And yet nowhere in the book does Covino discuss technology or Clarke’s Third Law, which any sci-fi geek can recall from memory (as I did when composing the first draft of this chapter, and I can barely lay claim to the title of “sci-fi geek”).
-
-For those unfamiliar with the work, *Magic, Rhetoric, and Literacy* is partially an exploration of binaries: articulate and inarticulate power; official and unofficial literacies; arresting and generative discourse; product and process; magic and rhetoric.
-
-Graphical User Interfaces
-
-Whole-Cloth Downloads: Drupal, WordPress, MediaWiki
 
 
-When you’ve installed the Rails gem, what you have a single spell to cast a new application into existence: `rails new`.
