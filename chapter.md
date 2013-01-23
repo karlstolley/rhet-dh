@@ -17,9 +17,7 @@ Decades before Steve Jobs pronounced the iPad to be a magical device, Arthur C. 
 
 But the magical incantation of the written word in one programming language or another is what makes the magic. Jay David Bolter observed in 1991 a simple fact that is all but forgotten today: “Even a graphics program does not draw: it writes.” In a time before the introduction of Microsoft Windows 3.1 and the mouse-and-GUI model of interaction that that operating system would make ubiquitous, Bolter could confidently proclaim what is less obvious today: “All computing is reading and writing. The computer is therefore a technology for all writers--scientists and engineers as well as scholars, novelists, and poets” (10).
 
-[Writing transition here--Creative Code, maybe?]
-
-
+Recalling the scene from *The Matrix* where Neo announces to Tank from inside The Construct that he needs “Guns. Lots of guns,” digital designer John Maeda reflects on “the sense of magic that occurs when Neo expresses his wish. The instantaneous rush of tremendous resources, as visualized in the simple special effect of this scene, epitomizes for me the experience of freedom when programming the invisible spaces of computer codes” (*Creative Code*, 17).
 
 “Even in our nonmagical world, magic remains a conceptual construct for appraising the powers of language,” writes William Covino in *Magic, Rhetoric, and Literacy*, “and while magic is understood by some as a liberatory alternative to established rationalism, the prospect of a magical epistemology is a fearful one even for those who endorse literacy as a disruptive force” (5).
 
