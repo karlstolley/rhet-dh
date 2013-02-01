@@ -37,26 +37,25 @@ But magic is not simply magic. In what Covino describes as “arresting magic,�
 
 A fully realized, nuanced digital rhetoric has been arrested by the WYSIWYG interface. In fact, I don’t think a rhetoric of programming is possible to articulate at the moment; there are simply not enough of us who program. And those of us who do program have yet to argue that the artful manipulation of symbols that constitutes programming should not be distinguished from or denigrated with regard to any other activity traditionally considered “writing.”
 
+## Ruby on Rails & Model-View-Controller (MVC)
 
+I won’t go into a lengthy technical description of Ruby on Rails (just search the Web for it), but I will say that it is a Web development framework. Rails is installed on a computer via Ruby gems, a software package manager for the Ruby programming language, which Rails is written in.
 
+Rails should be of interest to writer-programmers for many reasons, but my primary purpose in showcasing it here is that Rails can be installed, invoked, and developed using only writing. There is no file to download and unzip (like Drupal, WordPress, and other platforms-as-frameworks that are currently popular). Rails is installed by running a command on the command line (indicated throughout this chapter by use of the dollar-sign, `$`):
 
+    $ gem install rails
+
+But installing Rails does not actually create a Rails application. Rather, it provides access to its library of different modules, including those for handling models, views, and controllers. Rails also provides a command-line program, conveniently called `rails`; and it is with the `rails` command that a project is brought to life. In this case, I am creating a new project called `magus`:
+
+    $ rails new magus
+
+A bunch of output will fly by, leaving a directory of the application’s name, in this case, `magus`. Changing into the `magus` directory
 ----
 
 
 Correcting one problem, especially through the ubiquitous WYSIWYG interface that outputs code on behalf of the writer, spirals into a game of Whack-a-Mole, introducing new problems whose solutions introduce still other problems. The same is true of throwing plugin upon plugin into Drupal and WordPress installations that stand as wholesale acts of reuse as invention. Download, unzip, upload, and run an install script.
 
 
-
-
-The problem is, widespread fear of programming among non-programmers is rampant; and with it, an overconfident sense of what does and does not constitute the scope and work of rhetoric.
-
-I’ll conclude this section with a quote from Giambattista Vico cited in Covino:
-
-    > [A]nyone who is confident of perceiving something in a clear and distinct idea of the mind
-    > is easily deceived, and he will often think he knows a thing distinctly when he still has
-    > only a confused consciousness of it...
-
-To use another quote, here is  In contenting itself with an arresting magic/rhetoric of programming, the field of rhetoric and the broader humanities alike cuts itself off from the possibilities of a generative rhetoric
 
 
 
