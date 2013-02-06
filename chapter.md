@@ -21,7 +21,7 @@ The remaining symbolic activity that hasn’t been obscured is perceived to be s
 
 Of course, outside of small groups of individuals in the field of rhetoric, particularly within Computers and Writing, the idea that “programming is writing,” or even that programming counts as intellectual work, is far from accepted. So it is within the broader pursuit of digital humanities. Ramsay and Rockwell note that, for those “who have turned to building, hacking, and coding as part of their normal research activity,” there is a looming question of “whether the manipulation of features, objects, and states of interest using the language of coding or programming...constitutes theorizing” within the digital humanities. Although far from arriving at any actionable answer to that question, Ramsay and Rockwell articulate the challenge that faces anyone who would claim that programming is literally writing: those who program and build are the only people “to present their own activities as capable of providing affordances as rich and provocative as that of writing.”
 
-The key word there is “activities.” It is not simply the created artifact, or the source code behind it, providing the affordances of intellectual work. It is the activity of programming itself that builders, writers-as-programmers must present. It is what I will attempt to present in an artificial case over the remainder of this chapter.
+The key word there is “activities.” It is not simply the created artifact, or the source code behind it, providing the affordances of intellectual work. It is the activity of programming itself that builders, writers-as-programmers must present. It is what I will attempt to present in an artificial case of writing a simple Web application over the remainder of this chapter.
 
 ## Magic & Programming
 
@@ -45,7 +45,7 @@ Rails should be of interest to writer-programmers for many reasons, but my prima
 
     $ gem install rails
 
-But installing Rails does not directly create a Rails application. Rather, having Rails installed provides access to its library of different modules, including those for handling models, views, and controllers. Rails also provides a command-line program, conveniently called `rails`; and it is with the `rails` command that a project is brought to life from the magical text-based command-line interface (CLI). In this case, I am creating a new project called `magus`:
+But installing Rails does not directly create a Rails application. Rather, having Rails installed provides access to its library of different modules, including those for handling models, views, and controllers. Rails also provides a command-line program, conveniently called `rails`; and it is with the `rails` command that a project is brought to life from the magical text-based command-line interface (CLI). In this case, I am creating a new project called Magus, whose purpose will be to enable someone to input single lines of source code or command-line input, and keep notes as to the usefulness or significance of those lines. Basically, Magus will be a commonplace book for source-level writing:
 
     $ rails new magus
 
@@ -104,4 +104,8 @@ What this means is that by writing two simple phrases (`rails new magus` and `ra
 
 Of course, what the `rails new` command builds is not much of an application at all. To move closer to becoming a Web application, a writer must do some more writing--issuing additional incantations on the CLI to describe the basic pieces of information that this Web application will be responsible for creating and maintaining.
 
-Conveniently parallel to Covino’s generative magic, the first real writing of a Rails app makes use of the `rails generate` command.
+Conveniently parallel to Covino’s generative magic, the first real writing of a Rails app makes use of the `rails generate` command. As the app is going to store single lines of code or CLI input, along with a note, I will create an object, which I’m calling Commonplace, that stores exactly those two things in the Magus app:
+
+    $ rails generate scaffold Commonplace sourceline:string note:text
+
+
