@@ -86,6 +86,18 @@ Although I applaud the intellectual curiosity underlying books such as *10 PRINT
 
 Not only have the syntaxes of programming languages evolved, but so too have the paradigms and idiomatic forms within given languages. For the remainder of this chapter (which continues on in digital form at GitHub), I want to provide a brief overview of a specific software construction paradigm, model-view-controller (MVC), and the almost religious devotion to MVC inherent in the Ruby on Rails web development framework.
 
+In MVC, there is a recognition of the three essential components of any digital system. The model is concerned with data in the abstract; ensuring, for example, the correct number of digits in a credit-card number. The view is concerned only with the presentation, typically visual, of the data in the model: outputting, for example, an editable field with a credit-card number--or perhaps an obscured version of the number: `**** **** **** 4567`. And finally, the controller awaits commands from a user seeking to, in this example, enter or revise a credit-card number, and perhaps ultimately make a purchase using the credit card. The controller may send data to the model, or make requests from the model for certain data that will ultimately be rendered in the view.
+
+I won’t go into a lengthy technical description of Ruby on Rails (just search the Web for it), but I will say that it is a Web development framework written in Ruby. Rails is installed on a computer via Ruby gems, a software package manager for the Ruby programming language, which Rails is written in.
+
+Rails should be of interest to writer-programmers for many reasons, but my primary purpose in showcasing it here is that Rails can be installed, invoked, and developed using only writing. There is no file to download and unzip (like Drupal, WordPress, and other platforms-as-frameworks that are currently popular). Rails is installed by running a command on the command line (indicated throughout this chapter by use of the dollar-sign, `$`):
+
+    $ gem install rails
+
+But installing Rails does not directly create a Rails application. Rather, having Rails installed provides access to its library of different modules, including those for handling models, views, and controllers. Rails also includes a command-line program, conveniently called `rails`; and it is with the `rails` command that a project is brought to life from the text-based command-line interface (CLI).
+
+The core of any Rails application is housed in a directory called `app/`, which itself contains a number of subdirectories, including `models/`, `views/`, and `controllers/`.
+
 
 
 
