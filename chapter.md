@@ -1,4 +1,5 @@
 # MVC, Materiality, and the Magus: The Rhetoric of Source-Level Production
+# The Magus of MVC: Rhetoric & Source-Level Production
 
 “The greater the range and intenseness of the opportunities for the exercising of our symbolic prowess, the greater might be our delight in such modes of action.” Kenneth Burke, “Rhetoric and Poetics,” *Language as Symbolic Action*, p. 297
 
