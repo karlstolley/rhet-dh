@@ -52,19 +52,15 @@ From my point of view, this draws us in close company to the knowledge-making pr
 
 Rhetoric, composition, and technical communication has no small body of work that researches *into* writing, often by studying writers and their contexts: for example, introductory writing students in first-year composition to seasoned technical writers working in the public or private sector. The research conducted *for* writing often takes a pedagogical turn: we research into making writing more teachable for others (students) rather than to necessarily improve our own practice.
 
-But it is Frayling’s last prepositional category, research *through* writing and rhetoric--indeed through programming, as “personally experienced” symbolic activity--that remains the great undiscovered and currently undervalued territory of knowledge-making.
-
-As examples of this, I can only hold up my first book (widely mislabeled as a textbook) and many of my articles, which editors and reviewers want to relegate to the “tutorial” sections of our field’s most respected journals. An intellectual ghetto awaits scholarship that displays the genre features of programming examples and applied-theoretical but nonetheless actionable knowledge brought forth through long hours of knowledge-making activity *through* writing and programming.
-
-Unless we want to keep defining--no, *debasing* ourselves by upholding the values and methods of literary studies, rhetoric must open itself (and perhaps new publication venues, such as the open-access journal that I launched in fall of 2013) to the possibility that what we tell students--that writing is inquiry (Lauer 1982)--is as true for us as it is for them.
+But it is Frayling’s last prepositional category, research *through* writing and rhetoric--indeed through programming, as “personally experienced” symbolic activity--that remains the great undiscovered and currently undervalued territory of knowledge-making. Programming remains a mysterious and magical activity.
 
 ## Magic & Programming
 
-Programming is writing. Programming is symbolic activity, in other words, within the province of rhetoric. However, “making language has long been regarded as, in some sense, magical; as a *spell*” writes William Covino in *Magic, Rhetoric, and Literacy*, adding “spelling, even in its ostensibly nonmagical sense, denotes the visible materialization of invisible thought” (Covino, 5).
+Programming is writing. Programming is symbolic activity, in other words, within the province of rhetoric. To program, as to write, is to make and act in the realm of the symbolic: “making language has long been regarded as, in some sense, magical; as a *spell*” writes William Covino in *Magic, Rhetoric, and Literacy*, adding “spelling, even in its ostensibly nonmagical sense, denotes the visible materialization of invisible thought” (Covino, 5).
 
 Decades before Steve Jobs pronounced the iPad to be a magical device at its unveiling in 2010, Arthur C. Clarke had already articulated what has become known as Clarke’s Third Law: “Any sufficiently advanced technology is indistinguishable from magic.” It is no feat of imagination to see the magic inherent in multitouch interfaces, retina displays, ubiquitous high-speed internet connectivity, and other hardware-based wonders introduced over the last decade.
 
-But the magical incantation of the written word in one programming language or another is what makes the magic.
+But the magical incantation of the written word in one programming language or another is what makes the symbolic activity of programming a particularly interesting problem for rhetorica.
 
 Recalling the scene from *The Matrix* where Neo announces to Tank from inside the Construct that he needs “Guns. Lots of guns,” digital designer John Maeda describes “the sense of magic that occurs when Neo expresses his wish. The instantaneous rush of tremendous resources, as visualized in the simple special effect of this scene, epitomizes for me the experience of freedom when programming the invisible spaces of computer codes” (*Creative Code*, 17).
 
