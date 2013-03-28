@@ -1,5 +1,8 @@
 # MVC, Materiality, and the Magus: The Rhetoric of Source-Level Production
 
+* **Abstract** (3-5 sentences)
+* **Keywords** (3-5)
+
 “The greater the range and intenseness of the opportunities for the exercising of our symbolic prowess, the greater might be our delight in such modes of action.” Kenneth Burke, “Rhetoric and Poetics,” *Language as Symbolic Action* (1966, 297)
 
 Let me open with the major premise of this chapter’s argument: programming is writing. I mean that literally. Yes, “programming is writing” is not infrequently invoked as a metaphor. And I agree with programmer Steve McConnell (2004) who dismisses writing as “the most primitive metaphor for software development,” although I don’t agree with his reasons for dismissal. Among McConnell’s observations on the metaphor’s shortcomings:
