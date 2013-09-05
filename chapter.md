@@ -1,12 +1,14 @@
 # MVC, Materiality, and the Magus: The Rhetoric of Source-Level Production
 
-* **Abstract** (3-5 sentences) Writing is more than a metaphor for the activity of programming. Being steeped in the materiality of the digital medium, programming provides new rhetorical and symbolic affordances for writers who would engage in it. Model-view-controller architecture and the development of sophisticated patterns and idioms within contemporary languages, such as Ruby, provide a scaffold for writers to initiate sustained, personal encounters with programming.
+* **Abstract** (3-5 sentences) Writing is more than a metaphor for the activity of programming. Being steeped in the materiality of the digital medium, programming provides new rhetorical and symbolic affordances for writers who would engage in it. Model-view-controller architecture and the development of sophisticated patterns and idioms within contemporary languages, such as Ruby and the Rails framework, provide a scaffold for digital humanists to initiate sustained, involved encounters with programming.
 
 * **Keywords** (3-5) programming, digital materiality, symbolic action, Ruby on Rails
 
 “The greater the range and intenseness of the opportunities for the exercising of our symbolic prowess, the greater might be our delight in such modes of action.” Kenneth Burke, “Rhetoric and Poetics,” *Language as Symbolic Action* (1966, 297)
 
-Let me open with the major premise of this chapter’s argument: programming is writing. I mean that literally. Yes, “programming is writing” is not infrequently invoked as a metaphor. And I agree with programmer Steve McConnell (2004) who dismisses writing as “the most primitive metaphor for software development,” although I don’t agree with his reasons for dismissal. Among McConnell’s observations on the metaphor’s shortcomings:
+Let me open with the major premise of this chapter’s argument: programming is writing. I mean that literally, as I will illustrate with some limited examples from the Ruby on Rails framework in this chapter (and a fuller companion example that can be found through this book's companion website).
+
+But as literal as I mean the phrase, “programming is writing” is frequently invoked as a metaphor, even among programmers. I agree with programmer Steve McConnell (2004) who dismisses writing as “the most primitive metaphor for software development,” although there are some key points in his dismissal that are unsound. Among McConnell’s observations on the metaphor’s shortcomings:
 
 * “[writing] doesn’t require any formal planning, and you figure out what you want to say as you
   go”
@@ -20,7 +22,7 @@ Let me open with the major premise of this chapter’s argument: programming is 
 * “when you finish writing a letter, you stuff it into an envelope and mail it. You can’t change
   it anymore”
 
-Rhetoricians will immediately recognize the oversimplified conception of writing at the heart of McConnell’s critique of the metaphor. True, writing may not require formal planning, but as even the introductory-writing student quickly discovers, that’s an unstudied and ineffective way to proceed. We know that writing is collaborative, to some degree, always. And from citation practices to genre features, writers have a wide foundation of reusable material upon which “originality” is built with no small degree of effectiveness, given a particular rhetorical occasion. To write is to engage in intelligent, ethical (i.e., non-plagiarized) reuse of “previous artifacts.” (However, as I will discuss later, in digital writing we reuse and outsource production with reckless abandon, preventing richer encounters with “originality.”)
+Practitioners and theorists of rhetoric will immediately recognize the oversimplified conception of writing at the heart of McConnell’s critique of the metaphor. True, writing may not require formal planning, but as even the introductory-writing student quickly discovers, that’s an unstudied and ineffective way to proceed. We know that writing is collaborative, to some degree, always. And from citation practices to genre features, writers have a wide foundation of reusable material upon which “originality” is built with no small degree of effectiveness, given a particular rhetorical occasion. To write is to engage in intelligent, ethical (i.e., non-plagiarized) reuse of “previous artifacts.” (However, as I will discuss later, in digital writing we reuse and outsource production with reckless abandon, preventing richer encounters with “originality.”)
 
 Granted, in certain forms of writing on certain occasions, change becomes impossible or at least very difficult, in the way McConnell suggests. But even digital writing of any complexity beyond a word processor document typically fares no better when it comes to revision and realizing the possibility of ongoing change. One-off digital invention--as in the first (and only) stab at writing even a basic web page--will have to suffice for the digital rhetorical act. There is simply too much risk involved in revision when digital production occurs apart from source code.
 
