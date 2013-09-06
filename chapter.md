@@ -40,9 +40,7 @@ On the command line, a bunch of output will fly by, indicating the creation of a
 
 ## Materiality
 
-Just as McConnell oversimplified the activity of writing, so too do writers (and non-programmers generally) fall prey to oversimplifying the activity of programming. When I claim that “programming is writing,” I am talking about writing source code right alongside or in service to natural languages. More than 30 years of visual interfaces interceding on behalf of writers and language (computer and natural) have arguably almost fully obscured the rich symbolic activity happening just beneath even the apparent simplicity of an iPad’s touch screen. The remaining symbolic activity that hasn’t been obscured is perceived to be simply beyond our symbolic concerns as writers and rhetoricians. What could be more preposterous than writers programming, when an app store app or an open-source package is readily available for download and installation? Shouldn’t writers, as Bill Hart-Davidson (2012) has suggested, simply outsource programming to other people?
-
-Such questions belie an impoverished, even ham-fisted conception of what programming is and what it does, or can do. Those questions arrest any consideration of the symbolic materiality and activity at programming’s core. They discourage the deep, long-term involvement with the digital medium that I believe is necessary to engage programmers and developers who are doing so much of our writing, so much of our rhetoric--even when we think, as Hart-Davidson seems to, that programmers can simply translate/program *our* ideas and make them reality.
+Just as McConnell oversimplified the activity of writing, so too do non-programmers generally oversimplify the activity of programming. When I claim that “programming is writing,” I am talking about writing source code right alongside and in service to acts of communication, including visual design and other matters for the screen. For over 30 years, point-and-click interfaces have mediated writing and other forms of digital communication. For all of the benefits of those interfaces, their mediation has also obscured much of the rich symbolic activity happening just beneath the apparent simplicity of something like an iPad’s touch screen.
 
 Jay David Bolter’s simple 1991 observation seems all but forgotten today: “Even a graphics program does not draw: it writes.” Working at a time even before the introduction of Microsoft Windows 3.1 and the mouse-and-GUI model of interaction that that operating system would make ubiquitous, Bolter could confidently proclaim what seems tenuous today: “All computing is reading and writing. The computer is therefore a technology for all writers--scientists and engineers as well as scholars, novelists, and poets” (10).
 
@@ -111,8 +109,6 @@ Burke, Kenneth. *Language as Symbolic Action: Essays on Life, Literature, and Me
 Covino, William A. *Magic, Rhetoric, and Literacy: An Eccentric History of the Composing Imagination*. Albany, NY: Statue University of New York Press, 1994.
 
 Frayling, Christopher. “Reseach in Art and Design.” *Royal College of Art Research Papers* 1, no. 1  (1993/4).
-
-Hart-Davidson, Bill. “Code? Not so Much.” *Gayle Morris Sweetland Digital Rhetoric Collaborative* (blog). http://www.digitalrhetoriccollaborative.org/2012/10/17/code-not-so-much/
 
 Maeda, John. *Creative Code*. New York, NY: Thames and Hudson, 2004.
 
