@@ -1,6 +1,6 @@
 # MVC, Materiality, and the Magus: The Rhetoric of Source-Level Production
 
-* **Abstract** (3-5 sentences) Writing is more than a metaphor for the activity of programming. Being steeped in the materiality of the digital medium, programming provides new rhetorical and symbolic affordances for writers who would engage in it. Model-view-controller architecture and the development of sophisticated patterns and idioms within contemporary languages, such as Ruby and the Rails framework, provide a scaffold for digital humanists to initiate sustained, involved encounters with programming.
+* **Abstract** (3-5 sentences) Writing is more than a metaphor for the activity of programming. Being steeped in the digital medium’s materiality and its own kind of magic, programming provides unique rhetorical and symbolic affordances for digital humanists producing objects intended for the screens across an expanding range of devices. Model-view-controller (MVC) architecture and the development of sophisticated patterns and idioms within contemporary languages, such as Ruby and the Rails framework, provide a scaffold to initiate sustained encounters with programming.
 
 * **Keywords** (3-5) programming, digital materiality, symbolic action, Ruby on Rails
 
