@@ -24,7 +24,19 @@ But as literal as I mean the phrase, “programming is writing” is frequently 
 
 An oversimplified conception of writing forms the basis of McConnell’s critique of the metaphor. True, writing may not require formal planning, but as even the introductory-writing student quickly discovers, that’s an unstudied and ineffective way to proceed. Playwrights, poets, and technical writers alike know that writing is collaborative, to some degree, always. And from citation practices to genre features, writers have a wide foundation of reusable material upon which originality is built, given a particular rhetorical occasion: to write is to engage in intelligent, ethical (i.e., non-plagiarized) reuse of previous artifacts. However, as I discuss later, richer encounters with originality that digital writers and humanists alike might otherwise experience are routinely preempted by careless reuse and outsourcing of source-level production.
 
-Granted, for certain forms of even digital writing, change becomes impossible or at least very difficult, as McConnell suggests. Digital artifacts, despite the conventional wisdom of their near-infinite mutability, typically fare worse than a snail-mailed letter. When it comes to revision and realizing the possibility of ongoing change, one-off digital invention--as in the first (and only) stab at creating a basic web page--often must suffice. There is too much risk for irreparable damage to a digital artifact when iterative revisions to its source code are both mediated and obscured by opaque interfaces and software tools.
+Granted, for certain forms of even digital writing, change becomes impossible or at least very difficult, as McConnell suggests. Digital artifacts, despite the conventional wisdom of their near-infinite mutability, typically fare worse than a snail-mailed letter. When it comes to revision and realizing the possibility of ongoing change, one-off digital invention--as in the first (and only) stab at creating a basic web page--often must suffice. There is too much risk for irreparable damage to a digital artifact when iterative revisions to its source code are both mediated and obscured by opaque point-and-click interfaces and software tools.
+
+The situation is different, however, in web development frameworks such as Ruby on Rails, which I will use to illustrate some key points in this chapter (a full Rails app is available with additional commentary via this book’s companion website). To avoid a lengthy technical description of Ruby on Rails (just search the Web for it), it’s enough to say that Rails is a web development framework written in the Ruby programming language.
+
+Rails can be installed, invoked, and developed entirely through writing. There is no file to manually download and unzip (as with Drupal, WordPress, and other platforms-as-frameworks that are currently popular). Rails is installed by running a command on any system with a command line (indicated here by the dollar-sign, `$`) and a Ruby installation, as in the case of Mac OS X as well as many distributions of Linux:
+
+    $ gem install rails
+
+Installing Rails does not create a Rails application. Among other things detailed below, a Rails installation includes a command-line program, conveniently called `rails`; and it is with the `rails` command that a project is brought to life from the text-based command-line interface (CLI). All that is required is a name for the project, which in this example I’ve chosen BeSocial, an imaginary social networking application:
+
+    $ rails new besocial
+
+On the command line, a bunch of output will fly by, indicating the creation of a number of directories, as well as the installation of additional software packages that Rails depends on. Two lines written on the command line have built the foundations for a web application developed in writing. In fact, running `rails server` on the command line within the new `besocial` directory fires up a web server that enables this newborn app to be viewed in a web browser at `http://localhost:3000`.
 
 ## Materiality
 
@@ -89,18 +101,6 @@ Although I applaud the intellectual curiosity underlying books such as *10 PRINT
 Not only have the syntaxes of programming languages evolved, but so too have the paradigms and idiomatic forms within given languages. For the remainder of this chapter (which continues on in digital form at GitHub), I want to provide a brief overview of a specific software construction paradigm, model-view-controller (MVC), and the almost religious devotion to MVC inherent in the Ruby on Rails web development framework.
 
 In MVC, there is a recognition of the three essential components of any digital system. The model is concerned with data in the abstract; ensuring, for example, the correct number of digits in a credit-card number. The view is concerned only with the presentation, typically visual, of the data in the model: outputting, for example, an editable field with a credit-card number--or perhaps an obscured version of the number: `**** **** **** 4567`. And finally, the controller awaits commands from a user seeking to, in this example, enter or revise a credit-card number, and perhaps ultimately make a purchase using the credit card. The controller may send data to the model, or make requests from the model for certain data that will ultimately be rendered in the view.
-
-I won’t go into a lengthy technical description of Ruby on Rails (just search the Web for it), but I will say that it is a Web development framework written in Ruby. Rails is installed on a computer via Ruby gems, a software-package manager for the Ruby programming language, which Rails is written in.
-
-Rails should be of interest to writer-programmers for many reasons, but my primary purpose in showcasing it here is that Rails can be installed, invoked, and developed using only writing. There is no file to download and unzip (like Drupal, WordPress, and other platforms-as-frameworks that are currently popular). Rails is installed by running a command on the command line (indicated here by the dollar-sign, `$`):
-
-    $ gem install rails
-
-But installing Rails does not directly create a Rails application. Rather, having Rails installed provides access to its library of different modules, including those for handling models, views, and controllers. Rails also includes a command-line program, conveniently called `rails`; and it is with the `rails` command that a project is brought to life from the text-based command-line interface (CLI).
-
-*The conclusion of this chapter can be found in repository for the Rails app hosted on GitHub at https://github.com/xxx/xxx.git*
-
-
 
 ## Bibliography
 
