@@ -10,17 +10,10 @@ Let me open with the major premise of this chapter’s argument: programming is 
 
 But as literal as I mean the phrase, “programming is writing” is frequently invoked as a metaphor, even among programmers. I agree with programmer Steve McConnell (2004) who dismisses writing as “the most primitive metaphor for software development,” although there are some key points in his dismissal that are unsound. Among McConnell’s observations on the metaphor’s shortcomings:
 
-* “[writing] doesn’t require any formal planning, and you figure out what you want to say as you
-  go”
-
+* “[writing] doesn’t require any formal planning, and you figure out what you want to say as you go”
 * “writing is usually a one-person activity”
-
-* “in writing, a high premium is placed on originality. In software construction, [originality] is
-  often less effective than focusing on the reuse of design ideas, code, and test cases from
-  previous artifacts”
-
-* “when you finish writing a letter, you stuff it into an envelope and mail it. You can’t change
-  it anymore”
+* “in writing, a high premium is placed on originality. In software construction, [originality] is often less effective than focusing on the reuse of design ideas, code, and test cases from previous artifacts”
+* “when you finish writing a letter, you stuff it into an envelope and mail it. You can’t change it anymore”
 
 An oversimplified conception of writing forms the basis of McConnell’s critique of the metaphor. True, writing may not require formal planning, but as even the introductory-writing student quickly discovers, that’s an unstudied and ineffective way to proceed. Playwrights, poets, and technical writers alike know that writing is collaborative, to some degree, always. And from citation practices to genre features, writers have a wide foundation of reusable material upon which originality is built, given a particular rhetorical occasion: to write is to engage in intelligent, ethical (i.e., non-plagiarized) reuse of previous artifacts. However, as I discuss later, richer encounters with originality that digital writers and humanists alike might otherwise experience are routinely preempted by careless reuse and outsourcing of source-level production.
 
