@@ -87,27 +87,29 @@ How are digital humanists, such as digital writers, to discover the possibilitie
 
 Not only have the syntaxes of programming languages evolved, but so too have the paradigms and idiomatic forms within given languages. To conclude this chapter, I want to provide a brief overview of a specific software construction paradigm, model-view-controller (MVC) as implemented in the Ruby on Rails framework.
 
-MVC is a software design pattern that abstracts and separates three essential components of any digital system controlled, importantly, by a graphical user interface. Originally designed at Xerox PARC by Trygve Reenskaug (2008) in the late 1970s, MVC was intended to “to bridge the gap between the human user’s mental model and the digital model that exists in the computer.” The View provides a visual interface to data described by the Model. The Controller exists to respond to actions occurring with in the View and makes requests to the Model.
+MVC is a software design pattern that abstracts and separates three essential components of any digital system controlled, importantly, by a graphical user interface. Originally designed at Xerox PARC by Trygve Reenskaug in the late 1970s, MVC was intended to “to bridge the gap between the human user’s mental model and the digital model that exists in the computer” (Reenskaug 2008). The View provides a visual interface to data described by the Model. The Controller exists to respond to actions occurring with in the View and makes requests to the Model.
 
 ## Bibliography
 
-Bolter, Jay David. *Writing Space: The Computer, Hypertext, and the History of Writing*. Hillsdale, NJ: Lawrence Erlbaum Associates, 1991.
+Bolter, Jay David. 1991. *Writing Space: The Computer, Hypertext, and the History of Writing*. Hillsdale, NJ: Lawrence Erlbaum Associates.
 
-Burke, Kenneth. *Language as Symbolic Action: Essays on Life, Literature, and Method*. Berkeley, CA: University of California Press, 1966.
+Burke, Kenneth. 1966. *Language as Symbolic Action: Essays on Life, Literature, and Method*. Berkeley, CA: University of California Press.
 
-Covino, William A. *Magic, Rhetoric, and Literacy: An Eccentric History of the Composing Imagination*. Albany, NY: Statue University of New York Press, 1994.
+Covino, William A. 1994. *Magic, Rhetoric, and Literacy: An Eccentric History of the Composing Imagination*. Albany, NY: Statue University of New York Press.
 
-Frayling, Christopher. “Reseach in Art and Design.” *Royal College of Art Research Papers* 1, no. 1  (1993/4).
+Frayling, Christopher. 1993/4. “Reseach in Art and Design.” *Royal College of Art Research Papers* 1, no. 1.
 
-Maeda, John. *Creative Code*. New York, NY: Thames and Hudson, 2004.
+Maeda, John. 2004. *Creative Code*. New York, NY: Thames and Hudson.
 
-Marcotte, Ethan. “Responsive Web Design.” *A List Apart: For People Who Make Websites*, May 25, 2010. http://alistapart.com/article/responsive-web-design
+Marcotte, Ethan. 2010. “Responsive Web Design.” *A List Apart: For People Who Make Websites*, May 25. http://alistapart.com/article/responsive-web-design
 
-McConnell, Steve. *Code Complete*. 2nd ed. Redmond, WA: Microsoft Press, 2004. Kindle edition.
+McConnell, Steve. 2004. *Code Complete*. 2nd ed. Redmond, WA: Microsoft Press. Kindle edition.
 
-McCullough, Malcolm. *Abstracting Craft: The Practiced Digital Hand*. Cambridge, MA: The MIT Press, 1996.
+McCullough, Malcolm. 1996. *Abstracting Craft: The Practiced Digital Hand*. Cambridge, MA: The MIT Press.
 
-Montfort, Nick,  Patsy Baudoin, John Bell, Ian Bogost Jeremy Douglass, Mark C. Marino, Michael Mateas Casey Reas, Mark Sample, and Noah Vawter. *10 PRINT CHR$(205.5+RND(1)); : GOTO 10*. Cambridge, MA: The MIT Press, 2013.
+Montfort, Nick, Patsy Baudoin, John Bell, Ian Bogost Jeremy Douglass, Mark C. Marino, Michael Mateas Casey Reas, Mark Sample, and Noah Vawter. 2013. *10 PRINT CHR$(205.5+RND(1)); : GOTO 10*. Cambridge, MA: The MIT Press.
 
-Ramsay, Stephen and Geoffrey Rockwell, “Developing Things: Notes toward an Epistemology of Building in the Digital Humanities,” in *Debates in the Digital Humanities*, edited by Matthew K. Gold. Minneapolis, MN: University of Minnesota Press, 2012. Kindle edition.
+Ramsay, Stephen and Geoffrey Rockwell. 2012. “Developing Things: Notes toward an Epistemology of Building in the Digital Humanities,” in *Debates in the Digital Humanities*, edited by Matthew K. Gold. Minneapolis, MN: University of Minnesota Press. Kindle edition.
+
+Reenskaug, Trygve M. H. 2008. “MVC: Xerox PARC 1978-78.” http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html
 
