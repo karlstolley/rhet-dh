@@ -108,6 +108,55 @@ Rails will output something like the following when that command is run (I have 
 
 That output alone may appear to contradict my earlier complaints about outsourcing programming concerns to frameworks. A whole bunch of files have just been created, and they have some source code in them. From a certain point of view, that is a contradiction. However, the `rails g scaffold` command serves primarily a pedagogical purpose: it illustrates both how Rails organizes an application (everything of interest here has been created inside of an `app/` directory, with `models/`, `views/`, and `controllers/` each receiving subdirectories within `app/`). It also highlights not just the MVC approach to development, but two additional principles: convention over configuration, and don’t repeat yourself (DRY).
 
+    # users_controller.rb
+    class UsersController < ApplicationController
+      #
+      # GET /users/1
+      # GET /users/1.json
+      def show
+        @user = User.find(params[:id])
+
+        respond_to do |format|
+          format.html # show.html.erb
+          format.json { render json: @user }
+        end
+      end
+    end
+
+    #user.rb
+    class User < ActiveRecord::Base
+      attr_accessible :bio, :firstname, :lastname, :username
+    end
+
+    #users/show.html.erb
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Username:</b>
+      <%= @user.username %>
+    </p>
+
+    <p>
+      <b>Firstname:</b>
+      <%= @user.firstname %>
+    </p>
+
+    <p>
+      <b>Lastname:</b>
+      <%= @user.lastname %>
+    </p>
+
+    <p>
+      <b>Bio:</b>
+      <%= @user.bio %>
+    </p>
+
+
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', users_path %>
+
+
+
 Rails developers typically prefer to use either the stand-alone generators for models and controllers (the latter also generates corresponding views, by default) or, in the case of more advanced developers, custom generators of their own. Rails emphasizes convention over configuration: that is, when some particular pattern (such as that output by `rails g scaffold`) is very likely to be used in an application, that is the pattern it implements. But it is also possible to configure, that is, to do customized work by working with `rails g model` or `rails g controller` for models and controllers, respectively. If one were to create an app that mimics Twitter, for example, it would be unnecessary to have controller actions for updating (Twitter posts can be created or deleted, but not edited or updates). The `edit` and `update` controller actions supplied by `rails g scaffold`, in other words, would be superfluous. While they could be deleted, it’s likely preferable not to create such actions in the first place.
 
 When I teach Rails in my course on Web Application Development, students and I build one or two throw-away apps using `rails g scaffold`--just to get a sense of how Rails apps are organized, and to illustrate the interactions between the model, a controller action, and the controller action’s corresponding view. When students begin to work on their first serious app, they begin by generating just the models for their application. With those in place, a second Rails command, `rails console`, opens a read-evaluate-print loop (REPL) that has loaded their Rails app. Students then can learn to manipulate the models writing code that would likely appear in their controllers. They can also learn to create methods in their models (such as combining, for example, a `firstname` and `lastname` record into a new method called `fullname`) and test them in the REPL, before attempting to call them from within the Rails app.
