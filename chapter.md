@@ -80,11 +80,39 @@ How are digital humanists, such as digital writers, to discover the possibilitie
 
 ## Model-View-Controller Architecture
 
-Not only have the syntaxes of programming languages evolved, but so too have the paradigms and idiomatic forms within given languages. To conclude this chapter, I want to provide a brief overview of a specific software architecture, model-view-controller (MVC) as implemented in the Ruby on Rails framework.
+Not only have the syntaxes of programming languages evolved, but so too have the paradigms and idiomatic forms within given languages. To conclude this chapter, I want to provide a brief overview of a specific software architecture, model-view-controller (MVC), as implemented in the Ruby on Rails framework.
 
-MVC is a software design pattern that abstracts and distinguishes three essential components of any digital system controlled, importantly, by a graphical user interface. Originally designed at Xerox PARC by Trygve Reenskaug and his colleagues in the late 1970s, MVC was intended to “to bridge the gap between the human user’s mental model and the digital model that exists in the computer” (Reenskaug 2008). The View provides a visual interface to data described by the Model. The Controller exists to respond to actions occurring with in the View and makes requests to the Model.
+MVC is a software design pattern that abstracts and distinguishes three core components of any digital system controlled, importantly, by a graphical user interface. Originally designed at Xerox PARC by Trygve Reenskaug and his colleagues in the late 1970s, MVC was intended to “to bridge the gap between the human user’s mental model and the digital model that exists in the computer” (Reenskaug 2008). The View provides a visual interface to data described by the Model. The Controller exists to respond to actions occurring with in the View and makes requests to the Model.
 
-Each of MVC’s components must be constructed through programming.
+Each of MVC’s components must be constructed through programming. Rails provides a number of commands to construct the component parts of MVC from the command line, using the `rails generate` command. `rails generate` is invoked so frequently in Rails that it has been aliased to the shorter `rails g` command. Every Rails tutorial begins with the `rails generate scaffold` command, which produces a basic model, a controller that handles standard create/read/update/delete (CRUD) operations that are typical for working on data, and a set of matching views. Each view is named with regard to its corresponding controller action.
+
+So to return to the skeletal BeSocial app that I created earlier in the chapter: regardless of what the BeSocial app enables users to do, it is clear that there will need to be users in the system. So the first scaffold that I will create is for a User model, and its corresponding properties (a username, first and last names, and a bio):
+
+    $ rails g scaffold User username:string firstname:string lastname:string bio:text
+
+Rails will output something like the following when that command is run (I have isolated just the lines of output that are relevant to this chapter):
+
+      invoke  active_record
+      create    app/models/user.rb
+      invoke  resource_route
+       route    resources :users
+      invoke  scaffold_controller
+      create    app/controllers/users_controller.rb
+      invoke    erb
+      create      app/views/users
+      create      app/views/users/index.html.erb
+      create      app/views/users/edit.html.erb
+      create      app/views/users/show.html.erb
+      create      app/views/users/new.html.erb
+      create      app/views/users/_form.html.erb
+
+That output alone may appear to contradict my earlier complaints about outsourcing programming concerns to frameworks. A whole bunch of files have just been created, and they have some source code in them. From a certain point of view, that is a contradiction. However, the `rails g scaffold` command serves primarily a pedagogical purpose: it illustrates both how Rails organizes an application (everything of interest here has been created inside of an `app/` directory, with `models/`, `views/`, and `controllers/` each receiving subdirectories within `app/`). It also highlights not just the MVC approach to development, but two additional principles: convention over configuration, and don’t repeat yourself (DRY).
+
+Rails developers typically prefer to use either the stand-alone generators for models and controllers (the latter also generates corresponding views, by default) or, in the case of more advanced developers, custom generators of their own. Rails emphasizes convention over configuration: that is, when some particular pattern (such as that output by `rails g scaffold`) is very likely to be used in an application, that is the pattern it implements. But it is also possible to configure, that is, to do customized work by working with `rails g model` or `rails g controller` for models and controllers, respectively. If one were to create an app that mimics Twitter, for example, it would be unnecessary to have controller actions for updating (Twitter posts can be created or deleted, but not edited or updates). The `edit` and `update` controller actions supplied by `rails g scaffold`, in other words, would be superfluous. While they could be deleted, it’s likely preferable not to create such actions in the first place.
+
+When I teach Rails in my course on Web Application Development, students and I build one or two throw-away apps using `rails g scaffold`--just to get a sense of how Rails apps are organized, and to illustrate the interactions between the model, a controller action, and the controller action’s corresponding view. When students begin to work on their first serious app, they begin by generating just the models for their application. With those in place, a second Rails command, `rails console`, opens a read-evaluate-print loop (REPL) that has loaded their Rails app. Students then can learn to manipulate the models writing code that would likely appear in their controllers. They can also learn to create methods in their models (such as combining, for example, a `firstname` and `lastname` record into a new method called `fullname`) and test them in the REPL, before attempting to call them from within the Rails app.
+
+
 
 ## Bibliography
 
