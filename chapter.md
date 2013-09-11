@@ -82,15 +82,18 @@ Situated as I am in the study of digital rhetoric, design, and development, this
 
 MVC is a software design pattern that abstracts and distinguishes three core components of any digital system that will be controlled by a user-facing graphical user interface. Originally conceived at Xerox PARC by Trygve Reenskaug and his colleagues in the late 1970s, MVC was intended to “to bridge the gap between the [programmer’s] mental model and the digital model that exists in the computer” (Reenskaug 2008). The View provides a visual interface to data described by the Model. The Controller exists to respond to actions occurring within the View and makes requests to the Model.
 
-Each of MVC’s components must be constructed through programming. Rails provides a number of commands to construct the component parts of MVC from the command line, using the `rails generate` command. `rails generate` is invoked so frequently in Rails that it has been aliased to the shorter `rails g` command. Every Rails tutorial begins with the `rails generate scaffold` command, which produces a basic model, a controller that handles standard create/read/update/delete (CRUD) operations that are typical for working on data, and a set of matching views. In Rails, each view is named with regard to its corresponding controller action.
+In Rails, there is no GUI: instead, there is a command-line interface (CLI) and an application programming interface (API). Both can be accessed only through writing (issuing commands, writing source code), and are discoverable primarily via the Rails documentation, either online at http://api.rubyonrails.org or on the command line: issuing the command `gem server` starts a local web server, providing documentation for all Gems, including Rails, at http://localhost:8808/. The basic documentation for the `rails` CLI is available by running `rails -h`; documentation for specific `rails` commands can be found by appending `-h`, such as `rails generate -h`. 
 
-So to return to the skeletal BeSocial app that I created earlier in the chapter: regardless of what the BeSocial app enables users to do, it is clear that there will need to be users in the system. So the first scaffold that I will create is for a User model, and its corresponding properties (a username, first and last names, and a bio):
+The `rails generate` command builds the basic component parts of MVC, using a number of generators that Rails makes available. `rails generate` is invoked so frequently that it has been aliased to the shorter `rails g` command. Every Rails tutorial begins with the `rails generate scaffold` command, which produces the scaffolding for MVC: a basic model; a controller that handles standard create/read/update/delete (CRUD) operations that are typical for working on data; and a set of matching views. By convention, Rails names generated views to match their corresponding controller action.
+
+So to return to the skeletal BeSocial app that I created earlier in the chapter: regardless of what the BeSocial app enables users to do, it is clear that there will need to be users in the system. So the first scaffold that I will create is for a User model and what I think should be its corresponding properties (a username, first and last names, and a bio). This line generates a model called User, that will consist of a username as well as first and last names, each of the string datatype (a string is roughly 255 characters), plus a biography, `bio`, that is of the text datatype (basically a much longer string.:
 
     $ rails g scaffold User username:string firstname:string lastname:string bio:text
 
-This line specifies a model called User, that will consist of a username as well as first and last names, each of the string datatype (a string is just a collection of roughly 255 characters), plus a biography, `bio`, that is of the text datatype (basically a much longer string). Rails, in a reflection of Maeda’s observation of the “rush of tremendous resources” called forth from programming, will output something like the following when that command is run (I have isolated just the lines of output that are relevant to this chapter):
+Upon running this command, Rails demonstrates Maeda’s observation of the “rush of tremendous resources” that programming calls forth:
 
       invoke  active_record
+      create    db/migrate/20130903160957_create_users.rb
       create    app/models/user.rb
       invoke  resource_route
        route    resources :users
@@ -104,22 +107,20 @@ This line specifies a model called User, that will consist of a username as well
       create      app/views/users/new.html.erb
       create      app/views/users/_form.html.erb
 
-Based on one command, Rails has generated this particular scaffold according to my specifications for the data that will make up the User model. By invoking ActiveRecord, Rails’s native Object-Relational Mapping (ORM) module, it has created a recipe (called a *migration*) that specifies how the User object will be mapped to a database table. But unlike Drupal and WordPress, which have traditionally specified a specific database (MySQL), Rails is equipped to connect to and create in many different databases the tables specified in the app. By default, Rails uses an embedded database called SQLite; this is helpful in development, as there are no usernames, passwords, or special connection instructions required for the SQLite database.
+Based on one command, Rails has generated this particular MVC scaffold based on my specifications for the data that will make up the User model (I have removed many lines of output that are beyond the scope of this chapter). By invoking ActiveRecord, Rails’s native Object-Relational Mapping (ORM) module, it has created a recipe (called a *migration*, the file inside of `db/migrate`) that specifies how the User object will be mapped to a database table. Unlike Drupal and WordPress, which have traditionally specified a specific database (MySQL) with pre-determined columns, Rails is equipped to connect to and create in many different databases the tables specific to an app. (By default, Rails uses an embedded database called SQLite.)
 
-The Model code that Rails has generated in the `app/models/user.rb` file is quite minimal:
+The Model code that Rails generated in the `app/models/user.rb` file is quite minimal:
 
     # app/models/user.rb
     class User < ActiveRecord::Base
       attr_accessible :bio, :firstname, :lastname, :username
     end
     
-Just three lines that define the User class, and allow throughout the rest of Rails access to the four attributes that I specified. If someone wishes to show the record for a particular user, this portion of the controller code would be invoked (I have omitted the other CRUD methods):
+Just three lines that define the User class, and allows the rest of the Rails app to access to the four data attributes that I specified. If someone wished to see the record for a particular user, this portion of the controller code would be invoked (for brevity, I have omitted the other CRUD actions):
 
     # app/controllers/users_controller.rb
     class UsersController < ApplicationController
       
-      # GET /users/1
-      # GET /users/1.json
       def show
         @user = User.find(params[:id])
 
@@ -131,32 +132,56 @@ Just three lines that define the User class, and allow throughout the rest of Ra
 
     end
 
-The line that reads `@user = User.find(params[:id])` is the controller speaking to the model, asking it to create an instance of the User class, based on a particular user ID that is pulled from a URL pattern, e.g., `http://localhost:3000/users/123` will attempt to look for a user with 123 as a unique identifier.
+The line that reads `@user = User.find(params[:id])` is the controller creating an instance (`@user`) of the `User` class defined in the model, based on a user ID that is pulled from a URL pattern (e.g., `http://localhost:3000/users/123` will attempt to look for a user with 123 as a unique identifier).
 
-The `@user` instance is in turn available in the user show view; to output the given user’s username in the view, `show.html.erb` would include lines similar to this:
+The controller makes the `@user` instance available to view that shows details for individual users. To output the a logged-in user’s username in the view, for example, `show.html.erb` would include lines similar to this:
 
     # app/views/users/show.html.erb
     <p>
       Your username is <%= @user.username %>.
     </p>
 
-The unusual `.html.erb` extension reveals that this template file is written in Embedded Ruby (ERB). Similar to PHP and its `<?php /* Some PHP Code */ ?>` tags that can be inserted alonside regular HTML tags, ERB requires placing Ruby code that is to be output inside of `<%=` and `%>` tags. In this case, the view calls upon the `@user` instance provided by the controller, and the `username` method defined in the model, which is accessed via dot notation: `@user.username`.
+The unusual `.html.erb` file extension indicates that this view file is written in Embedded Ruby (ERB). Similar to PHP and its `<?php` and `?>` tags that are written among HTML tags, ERB requires placing Ruby code inside of `<%=` and `%>` tags. In this case, the view calls upon the `@user` instance provided by the controller, and the `username` method defined in the model, which is accessed via dot notation: `@user.username`. (Other template frameworks, particularly HAML, are cleaner than ERB, the Rails default. The example app at the companion site shows HAML in action.)
 
-Rendered in the browser, that particular line of code for a username `johnsmith` would look something like this, if one chose View > Source from within the web browser:
+That line of view code would, for a username `johnsmith`, render as HTML like this, as could be inspected by choosing View > Source from a web browser:
 
-    <!-- HTML source output at /users/123 -->
+    <!-- HTML source output at http://localhost:3000/users/123 -->
 
     <p>
       Your username is johnsmith.
     </p>
 
-All of this readymade source code, spread among a preplanned set of files and directories, may appear to contradict my earlier complaints about outsourcing programming concerns to frameworks. However, the `rails g scaffold` command serves primarily a pedagogical purpose: it illustrates both how Rails organizes an application (everything of interest here has been created inside of an `app/` directory, with `models/`, `views/`, and `controllers/` each receiving subdirectories within `app/`). It also highlights not just the MVC approach to development, but two additional principles: convention over configuration, and don’t repeat yourself (DRY).
+All of this readymade source code, spread among a set of files and directories generated by Rails, would appear to contradict my earlier complaints about outsourcing programming concerns to frameworks. However, the `rails g scaffold` command serves primarily a pedagogical purpose: it illustrates both how Rails organizes an application (everything of interest here has been created inside of an `app/` directory, with `models/`, `views/`, and `controllers/` each receiving subdirectories within `app/`) and minimal, skeletal code that, while functional, is hardly ready for a web-available app.
 
-Rails developers typically prefer to use either the stand-alone generators for models and controllers (the latter also generates corresponding views, by default) or, in the case of more advanced developers, custom generators of their own. Rails emphasizes convention over configuration: that is, when some particular pattern (such as that output by `rails g scaffold`) is very likely to be used in an application, that is the pattern it implements. But it is also possible to configure, that is, to do customized work by working with `rails g model` or `rails g controller` for models and controllers, respectively. If one were to create an app that mimics Twitter, for example, it would be unnecessary to have controller actions for updating (Twitter posts can be created or deleted, but not edited or updates). The `edit` and `update` controller actions supplied by `rails g scaffold`, in other words, would be unnecessary. While they could be deleted from the controller file, it’s preferable not to create such actions in the first place if it’s clear at the outset that they’ll never be used.
+Rails developers typically prefer to use either the stand-alone generators for models and controllers (the latter also generates corresponding views, by default) or, in the case of more advanced developers, custom generators of their own creation.
 
-When I teach Rails in my course on Web Application Development, students and I build one or two throw-away apps using `rails g scaffold`--just to get a sense of how Rails apps are organized, and to illustrate the interactions between the model, a controller action, and the controller action’s corresponding view. When students begin to work on their first serious app, they begin by generating just the models for their application. With those in place, a second Rails command, `rails console`, opens a read-evaluate-print loop (REPL) that has loaded their Rails app. Students then can learn to manipulate the models writing code that would likely appear in their controllers. They can also learn to create methods in their models (such as combining, for example, a `firstname` and `lastname` record into a new method called `fullname`) and test them in the REPL, before attempting to call them from within the Rails app.
+When I teach Rails in my course on Web Application Development, students and I build one or two throw-away apps using `rails g scaffold`, just to get a sense of how Rails apps are organized, and to illustrate the interactions between MVC’s component parts. A small customization to the User model here, for example, might be to ensure that all usernames are unique. That is achieved by adding one line to the User model:
 
+    # app/models/user.rb
+    class User < ActiveRecord::Base
+      attr_accessible :bio, :firstname, :lastname, :username
+    
+      validates_uniqueness_of :username
+      
+    end
 
+What I enjoy about the Rails framework is how the methods in its API (such as `validates_uniqueness_of`) are so close to written English: “the User model validates the uniqueness of each username.” Students further introduce their own methods (and thus add to the API provided by Rails). For example, to make a user’s full name available as a method on `@user` instances, the User model can be extended by writing a custom method, perhaps called `fullname`:
+
+    # app/models/user.rb
+    class User < ActiveRecord::Base
+      attr_accessible :bio, :firstname, :lastname, :username
+    
+      validates_uniqueness_of :username
+      
+      def fullname
+        [self.firstname, self.lastname].join(" ")
+      end
+      
+    end
+
+The view and other components of Rails immediately has access to that method: just write `@user.fullname` and something like `John Smith` will be output.
+
+That is a very small taste of the lived experience of writing as programming. As the example app for this chapter shows, there is one additional piece of technology that helps to capture and preserve such experiences: a version control system, such as Git. Git enables writer-programmers to record both the exact Rails command and its output as a particular moment in a project’s history. Subsequent changes, such as extensions to the model, can also be recorded along with a rich, descriptive narrative of what was done, and why. Authors and peer reviewers alike can read the running narrative of the programming experience, in close proximity to line-by-line representations of the changes that the narrative describes. Git, itself a CLI program, and the ongoing reflective writing required for its effective use adds an additional layer of lived experience: a moment-by-moment account that, over a sustained encounter, makes a compelling argument that programming offers “affordances as rich and provocative as that of writing.”
 
 ## Bibliography
 
